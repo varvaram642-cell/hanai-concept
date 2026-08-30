@@ -276,13 +276,20 @@
         .hero-right {
             position: relative;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            gap: 16px;
+            justify-content: center;
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
         }
         
         .hero-image {
             width: 100%;
-            max-width: 480px;
             aspect-ratio: 1/1.1;
             background-size: cover;
             background-position: center;
@@ -312,6 +319,7 @@
             left: 50%;
             transform: translateX(-50%);
             justify-content: center;
+            z-index: 2;
         }
         
         .floating-tags span {
@@ -326,9 +334,6 @@
         }
         
         .hero-note {
-            position: relative;
-            display: block;
-            margin-top: 12px;
             font-size: 0.6rem;
             color: #77736E;
             font-weight: 300;
@@ -337,8 +342,7 @@
             padding: 4px 16px;
             border-radius: 40px;
             width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
         
         .scroll-hint {
@@ -1278,8 +1282,10 @@
             .hero-right {
                 order: -1;
             }
-            .hero-image {
+            .hero-image-wrapper {
                 max-width: 100%;
+            }
+            .hero-image {
                 aspect-ratio: 1/0.9;
             }
             .floating-tags {
@@ -1424,7 +1430,7 @@
             <div class="hero-left">
                 <span class="label">Концепция для «Ханай»</span>
                 <h1>
-                    Я придумала новую<br>
+                    Я разработала новую<br>
                     <span class="highlight">концепцию бренда</span>
                 </h1>
                 <p>И хочу показать, как я могу превратить её в живые социальные сети, интересный контент и новые поводы для заказа.</p>
@@ -1435,14 +1441,16 @@
                 </div>
             </div>
             <div class="hero-right">
-                <div class="hero-image"></div>
-                <div class="floating-tags">
-                    <span>Публикации</span>
-                    <span>Сторис</span>
-                    <span>Видео</span>
-                    <span>Опросы</span>
-                    <span>Акции</span>
-                    <span>Продвижение</span>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image"></div>
+                    <div class="floating-tags">
+                        <span>Публикации</span>
+                        <span>Сторис</span>
+                        <span>Видео</span>
+                        <span>Опросы</span>
+                        <span>Акции</span>
+                        <span>Продвижение</span>
+                    </div>
                 </div>
                 <div class="hero-note">Концепция подготовлена специально для собеседования в «Ханай»</div>
             </div>
